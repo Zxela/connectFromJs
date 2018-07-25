@@ -14,9 +14,9 @@ knex('famous_people')
 		last_name: process.argv[3],
 		birthdate: process.argv[4]
 	})
-	.returning('*')
+	.returning('*') //returns response
 	.then(function(res) {
-		console.log(res);
+		console.log(res); //prints response
 		knex.destroy();
 		return null;
 	});
